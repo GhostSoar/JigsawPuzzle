@@ -1,0 +1,38 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="JigsawPuzzle.DIYPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    
+    <Canvas x:Name="Carrier" Width="480" Height="800">
+        <Image Source="controls\btn_3And3.png" Canvas.Left="10" Canvas.Top="680" Canvas.ZIndex="99" Height="75" Name="btn_3and3" Stretch="Fill" Width="150" ManipulationStarted="btn_3and3_ManipulationStarted" ManipulationCompleted="btn_3and3_ManipulationCompleted" />
+        <Image Source="controls\btn_4And4.png" Canvas.Left="165" Canvas.Top="680" Canvas.ZIndex="99" Height="75" Name="btn_4and4" Stretch="Fill" Width="150" ManipulationStarted="btn_4and4_ManipulationStarted" ManipulationCompleted="btn_4and4_ManipulationCompleted" />
+        <Image Source="controls\btn_5And5.png" Canvas.Left="320" Canvas.Top="680" Canvas.ZIndex="99" Height="75" Name="btn_5and5" Stretch="Fill" Width="150" ManipulationStarted="btn_5and5_ManipulationStarted" ManipulationCompleted="btn_5and5_ManipulationCompleted" />
+        <ProgressBar Visibility="Collapsed" IsIndeterminate="True" Height="30"  Minimum="0" Maximum="1"  HorizontalAlignment="Left" Margin="31,107,0,0" Name="progressBar" VerticalAlignment="Top" Width="374" Canvas.ZIndex="99" Canvas.Left="17" Canvas.Top="486" Foreground="#FFE2771B">
+        </ProgressBar>
+    </Canvas>
+ 
+    <!--演示 ApplicationBar 用法的示例代码-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="按钮 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="按钮 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="菜单项 1"/>
+                <shell:ApplicationBarMenuItem Text="菜单项 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

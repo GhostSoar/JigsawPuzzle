@@ -1,0 +1,73 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="JigsawPuzzle.HelpPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <!--枢轴控件-->
+        <controls:Pivot Title="帮助">
+            <!--枢轴项一-->
+            <controls:PivotItem Header="简介">
+                <Grid>
+                    <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,12,0">
+                        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" Name="textBlock1" Text="这是一款全新的拼图游戏,用户可根据个人喜好从本地图库中选取图片,系统会帮助你完成截图功能,全新的拼图玩法,告别智力拼图,回归自由式拖动拼图." Height="auto" Width="410" VerticalAlignment="Top" TextWrapping="Wrap" />
+                        <TextBlock HorizontalAlignment="Center" Margin="0,120,0,0" Name="textBlock2" Text="如果您有什么好的建议和想法请与我们联系,我们尽可能将您们的建议和想法变成现实.我们将陆续提供新的功能和应用,请多关注." Height="auto" Width="410" VerticalAlignment="Top" TextWrapping="Wrap" />
+                    </Grid>
+                </Grid>
+            </controls:PivotItem>
+
+            <!--枢轴项二-->
+            <controls:PivotItem Header="功能">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" Margin="0,10,0,0" Name="textBlock3" Text="1.本应用提供三种拼图类型（3*3,4*4,5*5），用户可自行选择喜欢类型中拼图进行游戏。" Height="auto" Width="410" VerticalAlignment="Top" TextWrapping="Wrap" />
+                    <TextBlock Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" Margin="0,10,0,0" Name="textBlock4" Text="2.本应用提供用户自定义个人的拼图，点击DIY按钮，可从本地图库或照相机获取自己要设计的拼图，进行选择拼图类型，本应用提供三种拼图类型（3*3,4*4,5*5）的截图，即可设计好属于自己的拼图游戏。" Height="auto" Width="410" VerticalAlignment="Top" TextWrapping="Wrap" />
+                    <TextBlock Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" Margin="0,10,0,0" Name="textBlock5" Text="3.在DIY创建自己的拼图游戏时，用户可通过两只手指，进行收缩和放大截图框的大小，截取自己所选图片某个部分的图片进行截图。" Height="auto" Width="410" VerticalAlignment="Top" TextWrapping="Wrap" />
+                    <TextBlock Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" Margin="0,10,0,0" Name="textBlock6" Text="4.如果用户不满意创建的拼图游戏，点击START，进入各类拼图后的图片，长按拼图图片1秒，即可进行删除操作。" Height="auto" Width="410" VerticalAlignment="Top" TextWrapping="Wrap" />
+                    <TextBlock Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" Margin="0,10,0,0" Name="textBlock7" Text="5.每张拼图都设有最高纪录的数据，用户完成拼图游戏后，最短时间者即可获得拍照或直接从本地图库中选取个人的照片存储留念。" Height="auto" Width="410" VerticalAlignment="Top" TextWrapping="Wrap" />
+                    <TextBlock Grid.Column="0" Grid.Row="5" HorizontalAlignment="Center" Margin="0,10,0,0" Name="textBlock8" Text="6.Record（纪录）页面保存着各拼图类型每张拼图的最短完成时间游戏者的纪录。" Height="auto" Width="410" VerticalAlignment="Top" TextWrapping="Wrap" />
+                </Grid>
+            </controls:PivotItem>
+            <controls:PivotItem Header="游戏规则">
+                <Grid>
+                    <TextBlock Grid.Column="0" Grid.Row="5" HorizontalAlignment="Center" Margin="0,10,0,0" Name="textBlock9" Text="用户进入主菜单后，点击START按钮进入各拼图类型选择页面，选择自己的拼图类型，进入拼图图片选择页面，点击即可进入游戏，用户通过拖动拼图块到指定的方格，当用户需要看原图时，可通过页面右下角的按钮进行操作。当用户完成拼图后，页面会自动跳转到结束页面（当拼图未完成时，一直处于游戏中状态，可通过后退键重新游戏），该页面纪录了用户此次游戏的时间，当用户打破该拼图最短时间时，即可点击页面上的按钮，进行拍照或者从本地图库选取一张图片进行留念（如果用户不进行该项操作，将会保存系统自带的一张图片）。" Height="auto" Width="410" VerticalAlignment="Top" TextWrapping="Wrap" />
+                </Grid>
+            </controls:PivotItem>
+        </controls:Pivot>
+    </Grid>
+
+    <!--演示 ApplicationBar 用法的示例代码-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton x:Name="appbar_button1" IconUri="/Images/appbar_button1.png" Text="按钮 1"/>
+            <shell:ApplicationBarIconButton x:Name="appbar_button2" IconUri="/Images/appbar_button2.png" Text="按钮 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem x:Name="menuItem1" Text="菜单项 1"/>
+                <shell:ApplicationBarMenuItem x:Name="menuItem2" Text="菜单项 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+    
+</phone:PhoneApplicationPage>
